@@ -1,14 +1,29 @@
 import { useState } from 'react'
 import './App.css'
-import MovieCard from './components/MovieCard'
+import Navbar from './components/Navbar'
+import MovieResults from './components/MovieResults'
 
 function App() {
   const [count, setCount] = useState(0)
+  const movies = [{name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+  {name : "movie" , link : "link" , img : "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"},
+]
 
   return (
-    <div className = "container my-12 mx-auto grid grid-cols-8 gap-3 px-4 md:px-12 md:text-sm">
-    <MovieCard movie = {"shreeram"} movie_img = "https://www.themoviedb.org/t/p/w342/pljRizZMI0RZ9dJEdSwqCRfYtr.jpg"></MovieCard>
+    <>
+    <Navbar></Navbar>
+    <div className='flex flex-col justify-center'>
+      <MovieResults movies = {movies}></MovieResults>
     </div>
+    </>
   )
 }
 
