@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.metrics.pairwise import linear_kernel, cosine_similarity
-import time
 
 class MovieRec():
     def __init__(self) -> None:
@@ -13,7 +12,7 @@ class MovieRec():
         self.count_cosine_sim = self.count_cosine(self.movies)
     
     def count_cosine(self,df,col = "soup"):
-        count = CountVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+        count = CountVectorizer(analyzer='word',ngram_range=(1, 2), stop_words='english')
         count_matrix = count.fit_transform(df[col])
         count_matrix = count_matrix.astype("float32")
         count_cosine_sim = cosine_similarity(count_matrix, count_matrix)
