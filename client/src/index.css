@@ -5,13 +5,13 @@
 @layer base {
     :root {
         --color-primary: 249 245 215;
-        --color-content: 40 36 37;
+        --color-content: 40 40 40;
         --color-secondary: 164 203 180;
     }
 
     :root[data-theme="dark"] {
-        --color-primary: 40 36 37;
+        --color-primary: 40 40 40;
         --color-content: 249 245 215;
-        --color-secondary: 49 48 77;
+        --color-secondary: 66 123 88;
     }
 }

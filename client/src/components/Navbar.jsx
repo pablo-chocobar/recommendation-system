@@ -83,7 +83,7 @@ function Navbar() {
 //     )
 //   }
   return (
-    <nav className='flex flex-row items-center pt-2 pl-2'>
+    <nav className='flex flex-row items-center pb-2 pl-2'>
 
       {/* <Link to="/" className='font-bold'>Home</Link> */}
 
